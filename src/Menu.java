@@ -20,31 +20,27 @@ public class Menu {
     Side[] sides = new Side[]{rice, asparagus, beens, potato};
     Drink[] drinks = new Drink[]{water, wineWhite, wineRed, juiceApple};
 
-//    public String[] getMainDishesNames() {
-//        String[] mainDishesNames = new String[mainDishes.length];
-//        for (int i = 0; i < mainDishes.length; i++) {
-//            mainDishesNames[i] = mainDishes[i].getDishName();
-//        }
-//        return mainDishesNames;
-//    }
-//
-//    public MainDish getBeef() {
-//        return beef;
-//    }
-//
-//
-//    public double[] getMainDishesPrices() {
-//        double[] mainDishesPrices = new double[mainDishes.length];
-//        for (int i = 0; i < mainDishes.length; i++) {
-//            mainDishesPrices[i] = mainDishes[i].getMainDishPrice();
-//        }
-//        return mainDishesPrices;
-//    }
+
+    public String[] getMainDishesNames() {
+        String[] mainDishesNames = new String[mainDishes.length];
+        for (int i = 0; i < mainDishes.length; i ++) {
+            mainDishesNames[i] = mainDishes[i].getName();
+        }
+        return mainDishesNames;
+    }
+
+    public double[] getMainDishesPrices() {
+        double[] mainDishesPrices = new double[mainDishes.length];
+        for (int i = 0; i < mainDishes.length; i ++) {
+            mainDishesPrices[i] = mainDishes[i].getPrice();
+        }
+        return mainDishesPrices;
+    }
 
     public String[] getSidesNames() {
         String[] sidesNames = new String[sides.length];
         for (int i = 0; i < sides.length; i ++) {
-            sidesNames[i] = sides[i].getSideName();
+            sidesNames[i] = sides[i].getName();
         }
         return sidesNames;
     }
@@ -52,7 +48,7 @@ public class Menu {
     public double[] getSidesPrices() {
         double[] sidesPrices = new double[sides.length];
         for (int i = 0; i < sides.length; i ++) {
-            sidesPrices[i] = sides[i].getSidePrice();
+            sidesPrices[i] = sides[i].getPrice();
         }
         return sidesPrices;
     }
@@ -60,7 +56,7 @@ public class Menu {
     public String[] getDrinksNames() {
         String[] drinksNames = new String[drinks.length];
         for (int i = 0; i < drinks.length; i ++) {
-            drinksNames[i] = drinks[i].getDrinkName();
+            drinksNames[i] = drinks[i].getName();
         }
         return drinksNames;
     }
@@ -68,56 +64,56 @@ public class Menu {
     public double[] getDrinksPrices() {
         double[] drinksPrices = new double[drinks.length];
         for (int i = 0; i < drinks.length; i ++) {
-            drinksPrices[i] = drinks[i].getDrinkPrice();
+            drinksPrices[i] = drinks[i].getPrice();
         }
         return drinksPrices;
     }
 
-//    String[] mainDishesNames = getMainDishesNames();
-//    double[] mainDishesPrices = getMainDishesPrices();
+    String[] mainDishesNames = getMainDishesNames();
+    double[] mainDishesPrices = getMainDishesPrices();
 
-//    private void printMainDishes() {
-//        printMainDishesTitle();
-//        for(int i = 0; i < mainDishesNames.length; i++) {
-//            print(mainDishesNames[i]);
-//            printSpacesAfterName(spacesAfterName(mainDishesNames, getSidesNames(),
-//                    getDrinksNames(), mainDishesNames[i]));
-//            printPrice(mainDishesPrices[i]);
-//            println();
-//        }
-//        println();
-//    }
-//
-//    private void printSides() {
-//        printSidesTitle();
-//        for(int i = 0; i < getSidesNames().length; i++) {
-//            print(getSidesNames()[i]);
-//            printSpacesAfterName(spacesAfterName(mainDishesNames, getSidesNames(),
-//                    getDrinksNames(), getSidesNames()[i]));
-//            printPrice(getSidesPrices()[i]);
-//            println();
-//        }
-//        println();
-//    }
+    private void printMainDishes() {
+        printMainDishesTitle();
+        for(int i = 0; i < mainDishesNames.length; i++) {
+            print(mainDishesNames[i]);
+            printSpacesAfterName(spacesAfterName(mainDishesNames, getSidesNames(),
+                    getDrinksNames(), mainDishesNames[i]));
+            printPrice(mainDishesPrices[i]);
+            println();
+        }
+        println();
+    }
 
-//    private void printDrinks() {
-//        printDrinksTitle();
-//        for(int i = 0; i < getDrinksNames().length; i++) {
-//            print(getDrinksNames()[i]);
-//            printSpacesAfterName(spacesAfterName(mainDishesNames, getSidesNames(),
-//                    getDrinksNames(), getDrinksNames()[i]));
-//            printPrice(getDrinksPrices()[i]);
-//            println();
-//        }
-//        println();
-//    }
-//
-//    public void printMenu() {
-//        printMenuTitle();
-//        printMainDishes();
-//        printSides();
-//        printDrinks();
-//        println();
-//        printLine();
-//    }
+    private void printSides() {
+        printSidesTitle();
+        for(int i = 0; i < getSidesNames().length; i++) {
+            print(getSidesNames()[i]);
+            printSpacesAfterName(spacesAfterName(mainDishesNames, getSidesNames(),
+                    getDrinksNames(), getSidesNames()[i]));
+            printPrice(getSidesPrices()[i]);
+            println();
+        }
+        println();
+    }
+
+    private void printDrinks() {
+        printDrinksTitle();
+        for(int i = 0; i < getDrinksNames().length; i++) {
+            print(getDrinksNames()[i]);
+            printSpacesAfterName(spacesAfterName(mainDishesNames, getSidesNames(),
+                    getDrinksNames(), getDrinksNames()[i]));
+            printPrice(getDrinksPrices()[i]);
+            println();
+        }
+        println();
+    }
+
+    public void printMenu() {
+        printMenuTitle();
+        printMainDishes();
+        printSides();
+        printDrinks();
+        println();
+        printLine();
+    }
 }

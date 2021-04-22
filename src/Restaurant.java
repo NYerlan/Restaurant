@@ -1,7 +1,7 @@
 public class Restaurant {
     public static void main(String[] args) {
         Menu menu = new Menu();
-//        menu.printMenu();
+        menu.printMenu();
 //
 //
 //        String[] names = menu.getMainDishesNames();
